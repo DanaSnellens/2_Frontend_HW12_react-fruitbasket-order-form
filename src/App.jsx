@@ -6,6 +6,8 @@ function App() {
     const [bananas, setBananas] = useState(0);
     const [apples, setApples] = useState(0);
     const [kiwis, setKiwis] = useState(0);
+
+
     
     function resetFruits() {
         setStrawberries(0);
@@ -13,6 +15,8 @@ function App() {
         setApples(0);
         setKiwis(0);
     }
+
+    C
 
   return (
     <>
@@ -24,9 +28,14 @@ function App() {
                     type="button"
                     disabled={strawberries === 0}
                     onClick={() => setStrawberries(strawberries - 1)}>
+                    -
                 </button>
-                <p></p>
-                <button></button>
+                <p>{strawberries}</p>
+                <button
+                    type="button"
+                    onClick={() => setStrawberries(strawberries + 1)}>
+                    +
+                </button>
             </article>
             <article>
                 <h2>🍌Bananen</h2>
@@ -36,8 +45,12 @@ function App() {
                     onClick={() => setBananas(bananas - 1)}>
                     -
                 </button>
-                <p></p>
-                <button></button>
+                <p>{bananas}</p>
+                <button
+                    type="button"
+                    onClick={() => setBananas(bananas + 1)}>
+                    +
+                </button>
             </article>
             <article>
                 <h2>🍏 Appels</h2>
@@ -47,8 +60,12 @@ function App() {
                     onClick={() => setApples(apples - 1)}>
                     -
                 </button>
-                <p></p>
-                <button></button>
+                <p>{apples}</p>
+                <button
+                    type="button"
+                    onClick={() => setApples(apples + 1)}>
+                    +
+                </button>
             </article>
             <article>
                 <h2>🥝 Kiwi's</h2>
@@ -58,14 +75,18 @@ function App() {
                     onClick={() => setKiwis(kiwis - 1)}>
                     -
                 </button>
-                <p></p>
-                <button></button>
+                <p>{kiwis}</p>
+                <button
+                    type="button"
+                    onClick={() => setKiwis(kiwis + 1)}>
+                    +
+                </button>
             </article>
-
-
-
-            
-            
+            <button
+                type="button"
+                onClick={() => resetFruits()}>
+                Reset
+            </button>
         </section>
     </>
   )
