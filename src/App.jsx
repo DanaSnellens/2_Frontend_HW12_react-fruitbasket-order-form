@@ -7,6 +7,14 @@ function App() {
     const [apples, setApples] = useState(0);
     const [kiwis, setKiwis] = useState(0);
 
+    const [firstName, setFirstName] = useState('');
+    const [lastName, setLastName] = useState('');
+    const [age, setAge] = useState(0);
+    const [zipCode, setZipCode] = useState('');
+/*    const [deliveryFrequency, setDeliveryFrequency] = useState('week');
+    const [deliveryTime, setDeliveryTime] = useState('daytime');
+    const [comment, setComment] = useState('');
+    const [agreeTerms, setAgreeTerms] = useState(false);*/
 
     
     function resetFruits() {
@@ -16,7 +24,6 @@ function App() {
         setKiwis(0);
     }
 
-    C
 
   return (
     <>
@@ -88,6 +95,50 @@ function App() {
                 Reset
             </button>
         </section>
+        <form>
+            <label htmlFor="form-firstName">
+                Voornaam:
+                <input
+                    type="text"
+                    id="form-firstName"
+                    name="firstName"
+                    value={firstName}
+                    onChange={(e) => setFirstName(e.target.value)}
+                />
+            </label>
+            <label htmlFor="form-lastName">
+                Achternaam:
+                <input
+                    type="text"
+                    id="form-lastName"
+                    name="lastName"
+                    value={lastName}
+                    onChange={(e) => setLastName(e.target.value)}
+                />
+            </label>
+            <label htmlFor="form-age">
+                Leeftijd:
+                <input
+                    type="text"
+                    id="form-age"
+                    name="age"
+                    value={age}
+                    placeholder="0"
+                    onChange={(e) => setAge(e.target.value)}
+                />
+            </label>
+            <label htmlFor="form-zipCode">
+                Postcode
+                <input
+                    type="text"
+                    id="form-zipCode"
+                    name="zipCode"
+                    value={zipCode}
+                    onChange={(e) => setZipCode(e.target.value)}
+                />
+            </label>
+
+        </form>
     </>
   )
 }
